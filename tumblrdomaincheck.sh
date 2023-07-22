@@ -23,12 +23,12 @@ function show_notification() {
         local os_version=$(sw_vers -productVersion)
         # Check macOS version for compatibility with osascript
         if [[ "$os_version" == 10.* ]]; then
-            osascript -e "display notification \"The domain '$domain' is now available!\" with title \"Tumblr Domain Available\""
+            osascript -e "display notification \"Good news! The domain '$domain' is now available!\" with title \"Tumblr Domain Available\""
         else
-            echo "The domain '$domain' is now available!"
+            echo "Good news! The domain '$domain' is now available!"
         fi
     else
-        notify-send "Tumblr Domain Available" "The domain '$domain' is now available!"
+        notify-send "Tumblr Domain Available" "Good news! The domain '$domain' is now available!"
     fi
 }
 
