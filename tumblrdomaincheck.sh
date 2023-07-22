@@ -23,12 +23,12 @@ function show_notification() {
         local os_version=$(sw_vers -productVersion)
         # Check macOS version for compatibility with osascript
         if [[ "$os_version" == 10.* ]]; then
-            osascript -e "display notification \"Good news! The domain '$domain' is now available!\" with title \"Tumblr Domain Available\""
+            osascript -e "display notification \"Good news! The domain '$domain' is now available!\" with title \"Tumblr Domain Check\""
         else
             echo "Good news! The domain '$domain' is now available!"
         fi
     else
-        notify-send "Tumblr Domain Available" "Good news! The domain '$domain' is now available!"
+        notify-send "Tumblr Domain Check" "Good news! The domain '$domain' is now available!"
     fi
 }
 
@@ -41,5 +41,5 @@ while true; do
         fi
     done
 
-    sleep 600 # Wait for 10 minutes (600 seconds) before checking again
+    sleep 3600 # Wait for 1 hour (3600 seconds) before checking again
 done
