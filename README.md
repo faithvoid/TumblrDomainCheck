@@ -7,7 +7,7 @@ Modify the shell script with the URL(s) you want to monitor, modify the time if 
 Requires the libnotify dependency for notifications on Linux.
 
 ## How it works:
-The script parses each listed Tumblr page for the words "There's nothing here.". If it finds those words, it notifies the user that the domain is available, otherwise it does nothing and scans again after the alloted time period.  
+The script parses each listed Tumblr page using curl for the words "There's nothing here.". If it finds those words, it notifies the user that the domain is available, otherwise it does nothing and scans again after the alloted time period.  
 
 ## Why?
 It's hard as hell to get good URLs on tumblr! This ups your odds of getting a URL you really like. 
